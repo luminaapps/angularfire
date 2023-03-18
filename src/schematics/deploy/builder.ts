@@ -21,17 +21,17 @@ export default createBuilder(
     if (!firebaseProject) {
       throw new Error('Cannot detirmine the Firebase Project from your angular.json or .firebaserc');
     }
-    if (firebaseProject !== defaultFirebaseProject) {
-      throw new Error('The Firebase Project specified by your angular.json or .firebaserc is in conflict');
-    }
+    // if (firebaseProject !== defaultFirebaseProject) {
+    //   throw new Error('The Firebase Project specified by your angular.json or .firebaserc is in conflict');
+    // }
 
     const firebaseHostingSite = options.firebaseHostingSite || defulatFirebaseHostingSite;
     if (!firebaseHostingSite) {
       throw new Error(`Cannot detirmine the Firebase Hosting Site from your angular.json or .firebaserc`);
     }
-    if (firebaseHostingSite !== defulatFirebaseHostingSite) {
-      throw new Error('The Firebase Hosting Site specified by your angular.json or .firebaserc is in conflict');
-    }
+    // if (firebaseHostingSite !== defulatFirebaseHostingSite) {
+    //   throw new Error('The Firebase Hosting Site specified by your angular.json or .firebaserc is in conflict');
+    // }
 
     const staticBuildTarget = { name: options.browserTarget || options.buildTarget || `${context.target.project}:build:production` };
 
